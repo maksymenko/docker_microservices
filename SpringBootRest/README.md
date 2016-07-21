@@ -1,6 +1,6 @@
 # Spring Boot - REST  - Jetty - Executable jar
 
-*Build executable jar and run*
+**Build executable jar and run**
 ```
 $ gradle build
 $ java -jar build/libs/mymodule-0.0.1-SNAPSHOT.jar
