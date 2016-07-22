@@ -1,10 +1,11 @@
-package com.sm.samples.config;
+package com.sm.samples.warehouse;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.sm.samples")
+
 @EnableAutoConfiguration
+@ComponentScan("com.sm.samples")
 public class SpringConfig {
 
 }

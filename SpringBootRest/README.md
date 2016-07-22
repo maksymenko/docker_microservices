@@ -2,9 +2,11 @@
 
 **Build executable jar and run**
 ```
-$ gradle build
-$ java -jar build/libs/mymodule-0.0.1-SNAPSHOT.jar
+$ ./gradlew build && java -jar ./build/libs/StringBootRest-0.0.1-SNAPSHOT.jar
 ```
+
+./gradlew build && java -jar ./build/libs/StringBootRest-0.0.1-SNAPSHOT.jar
+
 **Run in-place** 
 ```
 $ gradle bootRun

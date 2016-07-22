@@ -18,18 +18,18 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-
-
 dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.21'
-    compile 'org.springframework.boot:spring-boot-starter-web'
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile("org.springframework.boot:spring-boot-starter-jetty")
 }
-
 
 jar {
     baseName = 'StringBootRest'
     version = '0.0.1-SNAPSHOT'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
 }
