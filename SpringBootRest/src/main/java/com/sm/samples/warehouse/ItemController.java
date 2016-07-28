@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ItemController {
 
   @RequestMapping("/")
-  String index() {
-    return "Hello, this is item controller!! \r\n";
+  String hello() {
+    return "Hello, warehouse app \r\n";
   }
 }
