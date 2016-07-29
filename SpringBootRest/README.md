@@ -9,6 +9,11 @@ $ ./gradlew build && java -jar ./build/libs/Warehouse-0.0.1-SNAPSHOT.jar
 ```
 $ gradle bootRun
 ```
+**Usage**
+* Add item
+```
+curl -i -POST -H 'Content-Type: application/json' -d '{"sku":"AAA125", "name":"book", "description":"fiction", "price":"123.23"}' http://localhost:8080/item
+```
 
 ## Steps
 * Create project
