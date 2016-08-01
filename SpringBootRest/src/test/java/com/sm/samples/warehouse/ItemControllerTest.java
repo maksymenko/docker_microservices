@@ -30,6 +30,6 @@ public class ItemControllerTest {
   @Test
   public void hello_happyPath() throws Exception {
     mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
-        .andExpect(content().string(equalTo("Hello, warehouse app \r\nn")));
+        .andExpect(content().string(equalTo("Hello, warehouse app \r\n")));
   }
 }

@@ -37,6 +37,6 @@ public class ItemControllerIT {
   @Test
   public void getHello() throws Exception {
     ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
-    assertThat(response.getBody(), equalTo("Hello, warehouse app \r\nn"));
+    assertThat(response.getBody(), equalTo("Hello, warehouse app \r\n"));
   }
 }
