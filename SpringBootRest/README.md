@@ -23,3 +23,9 @@ http://localhost:8080/item
 $ gradle init --type=java-library
 ```
 * Add Spring boot dependecies and plugin
+
+
+----
+#### References:
+* https://spring.io/guides/gs/spring-boot/
+* http://spring.io/guides/gs/accessing-data-mongodb/

@@ -4,7 +4,7 @@ buildscript {
   }
   dependencies {
     classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE"
-    }
+  }
 }
 
 
@@ -23,7 +23,8 @@ dependencies {
     exclude module: "spring-boot-starter-tomcat"
   }
   compile("org.springframework.boot:spring-boot-starter-jetty")
-  compile("org.springframework.boot:spring-boot-starter-actuator")
+  compile("org.springframework.data:spring-data-mongodb:1.9.2.RELEASE")
+
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 

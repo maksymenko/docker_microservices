@@ -1,11 +1,26 @@
-package com.sm.samples.warehouse;
+package com.sm.samples.warehouse.model;
 
-public class Item {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="items")
+public class ItemModel {
+  @Id
   private long id;
   private String sku;
   private String name;
   private String description;
   private double price;
+
+  public ItemModel() {
+  }
+
+  public ItemModel(String sku, String name, String description, double price) {
+    this.sku = sku;
+    this.name = name;
+    this.description = description;
+    this.price = price;
+  }
 
   public long getId() {
     return id;

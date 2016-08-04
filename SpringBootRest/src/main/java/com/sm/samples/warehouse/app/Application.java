@@ -1,4 +1,4 @@
-package com.sm.samples.warehouse;
+package com.sm.samples.warehouse.app;
 
 import org.springframework.boot.SpringApplication;
 
