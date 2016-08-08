@@ -1,6 +1,5 @@
 package com.sm.samples.warehouse.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,14 +11,8 @@ import com.sm.samples.warehouse.model.ItemModel;
 public class ItemService {
   @Autowired
   private ItemDao itemDao;
-  
-  private long nextId = 1;
-  private List<ItemModel> catalog = new ArrayList<>();
 
-  public long addItem(ItemModel item) {
-//    item.setId(nextId++);
-//    catalog.add(item);
-//    
+  public String addItem(ItemModel item) {
     itemDao.save(item);
 
     return item.getId();
@@ -27,6 +20,5 @@ public class ItemService {
 
   public List<ItemModel> getAllItems() {
     return itemDao.findAll();
-    //return catalog;
   }
 }

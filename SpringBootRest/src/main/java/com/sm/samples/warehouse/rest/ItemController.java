@@ -28,7 +28,7 @@ public class ItemController {
   }
 
   @RequestMapping(value = "/item", method = RequestMethod.POST, consumes="application/json")
-  public long addItem(@RequestBody ItemModel item) {
+  public String addItem(@RequestBody ItemModel item) {
     return itemService.addItem(item);
   }
 

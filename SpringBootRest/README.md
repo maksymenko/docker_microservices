@@ -27,5 +27,6 @@ $ gradle init --type=java-library
 
 ----
 #### References:
+* http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 * https://spring.io/guides/gs/spring-boot/
 * http://spring.io/guides/gs/accessing-data-mongodb/

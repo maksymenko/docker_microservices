@@ -1,12 +1,14 @@
 package com.sm.samples.warehouse.model;
 
+import java.math.BigInteger;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="items")
 public class ItemModel {
   @Id
-  private long id;
+  private String id;
   private String sku;
   private String name;
   private String description;
@@ -22,11 +24,11 @@ public class ItemModel {
     this.price = price;
   }
 
-  public long getId() {
+  public String getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(String id) {
     this.id = id;
   }
 
