@@ -23,7 +23,9 @@ dependencies {
     exclude module: "spring-boot-starter-tomcat"
   }
   compile("org.springframework.boot:spring-boot-starter-jetty")
-  compile("org.springframework.data:spring-data-mongodb:1.9.2.RELEASE")
+ // compile("org.springframework.data:spring-data-mongodb:1.9.2.RELEASE")
+  compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+  
 
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }

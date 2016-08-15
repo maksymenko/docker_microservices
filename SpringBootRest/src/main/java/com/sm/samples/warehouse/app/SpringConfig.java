@@ -2,6 +2,7 @@ package com.sm.samples.warehouse.app;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 
