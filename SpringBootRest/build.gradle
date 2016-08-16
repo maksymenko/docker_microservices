@@ -18,17 +18,25 @@ repositories {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+
 dependencies {
-  compile("org.springframework.boot:spring-boot-starter-web") {
-    exclude module: "spring-boot-starter-tomcat"
+  [
+    "org.springframework.boot:spring-boot-starter-web",
+    "org.springframework.boot:spring-boot-starter-jetty",
+    "org.springframework.boot:spring-boot-starter-data-mongodb",
+  ].each { dep ->
+    compile(dep) {
+      exclude module: "spring-boot-starter-logging"
+      exclude module: "logback-classic"
+    }
   }
-  compile("org.springframework.boot:spring-boot-starter-jetty")
- // compile("org.springframework.data:spring-data-mongodb:1.9.2.RELEASE")
-  compile("org.springframework.boot:spring-boot-starter-data-mongodb")
-  
+
+  compile("org.springframework.boot:spring-boot-starter-log4j2")
+  compile("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.8.1")
 
   testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
 
 jar {
   baseName = 'Warehouse'

@@ -1,4 +1,4 @@
-package com.sm.samples.warehouse.dao;
+package com.sm.samples.warehouse.service;
 
 import java.math.BigInteger;
 

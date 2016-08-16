@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sm.samples.warehouse.dao.ItemService;
 import com.sm.samples.warehouse.model.ItemModel;
+import com.sm.samples.warehouse.service.ItemService;
 
 @RestController
 public class ItemController {

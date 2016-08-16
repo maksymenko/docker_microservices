@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 
 @EnableAutoConfiguration
-@EnableMongoRepositories(basePackages="com.sm.samples.warehouse.dao")
+@EnableMongoRepositories(basePackages="com.sm.samples.warehouse")
 @ComponentScan("com.sm.samples.warehouse")
 public class SpringConfig {
 
