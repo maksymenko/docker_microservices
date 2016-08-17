@@ -18,7 +18,7 @@ public class ItemController {
   private ItemService itemService;
 
   @RequestMapping("/")
-  String hello() {
+  public String hello() {
     return "Hello, warehouse app \r\n";
   }
 
