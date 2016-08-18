@@ -3,7 +3,7 @@ package com.sm.samples.warehouse.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="items")
+@Document(collection = "items")
 public class ItemModel {
   @Id
   private String id;
@@ -28,6 +28,14 @@ public class ItemModel {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+  public String getSku() {
+    return sku;
+  }
+
+  public void setSku(String sku) {
+    this.sku = sku;
   }
 
   public String getName() {

@@ -7,26 +7,29 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.common.base.Stopwatch;
 import com.sm.samples.warehouse.model.ItemModel;
 
 @Service
 public class ItemService {
-  private static final Logger LOG = LoggerFactory.getLogger(ItemService.class);
+  private static final Logger logger = LoggerFactory.getLogger(ItemService.class);
   
   @Autowired
   private ItemDao itemDao;
 
   public String addItem(ItemModel item) {
-    LOG.debug(">>> adding new Item {}" + item);
+    Stopwatch stopwatch = Stopwatch.createStarted();
+    logger.debug(">>> adding new Item {}" + item);
     itemDao.save(item);
-    LOG.debug(">>> new tem saved {}", item.getId());
+    logger.debug(">>> new tem saved {} in {}", item.getId(), stopwatch.toString());
     return item.getId();
   }
 
   public List<ItemModel> getAllItems() {
-    LOG.debug(">>> retrieve all items");
+    Stopwatch stopwatch = Stopwatch.createStarted();
+    logger.debug(">>> retrieve all items");
     List<ItemModel> items = itemDao.findAll();
-    LOG.debug(">>> found {} items", items.size());
+    logger.debug(">>> found {} items in {}", items.size(), stopwatch.toString());
     return items;
   }
 }

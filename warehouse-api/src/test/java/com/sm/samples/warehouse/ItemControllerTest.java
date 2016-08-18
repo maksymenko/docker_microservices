@@ -3,9 +3,6 @@ package com.sm.samples.warehouse;
 import java.util.Arrays;
 import java.util.List;
 
-import org.hamcrest.BaseMatcher;
-import org.hamcrest.Description;
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,26 +11,36 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.test.web.servlet.result.ModelResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.sm.samples.warehouse.model.ItemModel;
 import com.sm.samples.warehouse.rest.ItemController;
+import com.sm.samples.warehouse.service.ItemDao;
 import com.sm.samples.warehouse.service.ItemService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MockServletContext.class)
 public class ItemControllerTest {
+  private static final Logger logger = LoggerFactory.getLogger(ItemControllerTest.class);
   private MockMvc mvc;
 
   @Mock
+  private ItemDao itemDao;
+
+  @Spy
+  @InjectMocks
   private ItemService itemService;
 
   @InjectMocks
@@ -55,7 +62,10 @@ public class ItemControllerTest {
   @Test
   public void getAllItems_happyPath() throws Exception {
     List<ItemModel> items = Arrays.asList(newItem("1"), newItem("2"));
-    Mockito.when(itemService.getAllItems()).thenReturn(items);
+    Mockito.when(itemDao.findAll()).thenReturn(items);
+
+    MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/item").accept(MediaType.APPLICATION_JSON)).andReturn();
+    logger.debug(">>> resp: {}", result.getResponse().getContentAsString());
 
     mvc.perform(MockMvcRequestBuilders.get("/item").accept(MediaType.APPLICATION_JSON))
         .andExpect(MockMvcResultMatchers.status().isOk())

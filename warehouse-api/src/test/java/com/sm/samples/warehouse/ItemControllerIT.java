@@ -8,37 +8,33 @@ import java.net.URL;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.IntegrationTest;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.boot.test.TestRestTemplate;
+import org.springframework.boot.context.embedded.LocalServerPort;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
-import org.springframework.web.client.RestTemplate;
 
 import com.sm.samples.warehouse.app.SpringConfig;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@SpringApplicationConfiguration(classes = SpringConfig.class)
-//@WebAppConfiguration
-//@IntegrationTest({ "server.port=0" })
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = SpringConfig.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ItemControllerIT {
-  @Value("${local.server.port}")
+  @LocalServerPort
   private int port;
 
-  private URL base;
-  private RestTemplate template;
 
- // @Before
+  private URL base;
+  private TestRestTemplate template;
+
+  @Before
   public void setUp() throws Exception {
     this.base = new URL("http://localhost:" + port + "/");
     template = new TestRestTemplate();
   }
 
- // @Test
+  @Test
   public void getHello() throws Exception {
     ResponseEntity<String> response = template.getForEntity(base.toString(), String.class);
-    assertThat(response.getBody(), equalTo("Hello, warehouse app \r\nn"));
+    assertThat(response.getBody(), equalTo("Hello, warehouse app \r\n"));
   }
 }
