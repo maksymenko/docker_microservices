@@ -1,4 +1,4 @@
-package com.sm.samples.warehouse;
+package com.sm.samples.warehouse.rest;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;

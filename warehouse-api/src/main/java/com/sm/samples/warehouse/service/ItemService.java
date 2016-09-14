@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.google.common.base.Stopwatch;
-import com.sm.samples.warehouse.model.ItemModel;
+import com.sm.samples.warehouse.domain.ItemDao;
+import com.sm.samples.warehouse.domain.ItemModel;
 
 @Service
 public class ItemService {

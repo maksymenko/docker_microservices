@@ -1,4 +1,4 @@
-package com.sm.samples.warehouse.model;
+package com.sm.samples.warehouse.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

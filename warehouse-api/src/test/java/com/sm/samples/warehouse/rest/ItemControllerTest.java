@@ -1,4 +1,4 @@
-package com.sm.samples.warehouse;
+package com.sm.samples.warehouse.rest;
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,9 +25,9 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.sm.samples.warehouse.model.ItemModel;
+import com.sm.samples.warehouse.domain.ItemDao;
+import com.sm.samples.warehouse.domain.ItemModel;
 import com.sm.samples.warehouse.rest.ItemController;
-import com.sm.samples.warehouse.service.ItemDao;
 import com.sm.samples.warehouse.service.ItemService;
 
 @RunWith(SpringJUnit4ClassRunner.class)

@@ -1,5 +1,14 @@
 # Spring Boot - REST  - Jetty - Executable jar
 
+**Configure mongoDB**
+```
+$ mongo
+> use warehouse
+> show collections;
+> db.createUser({user: "mongo_usr", pwd: "mongo_pwd", roles: []});
+
+```
+
 **Build executable jar and run**
 ```
 $ ./gradlew build && java -jar ./build/libs/Warehouse-0.0.1-SNAPSHOT.jar
@@ -16,6 +25,12 @@ curl -i -POST -H 'Content-Type: application/json' \
 -d '{"sku":"AAA125", "name":"book", "description":"fiction", "price":"123.23"}' \
 http://localhost:8080/item
 ```
+
+* Show item list
+```
+curl http://localhost:8080/item
+```
+
 
 ## Steps
 * Create project
