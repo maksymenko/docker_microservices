@@ -1,4 +1,4 @@
-# Angular JS 
+## UI based on Angular JS 
 
 **Install nodeJS**
 ```
@@ -17,10 +17,9 @@ $ npm install http-server -g
 $ http-server
 
 ```
-
-```
 or add script to ./package.json
 
+```
 {
   "name": "my_server",
   "scripts": {
