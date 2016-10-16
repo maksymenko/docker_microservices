@@ -17,7 +17,7 @@ $ npm install http-server -g
 $ http-server
 
 ```
-or add script to ./package.json
+or add script to ./package.json and use start command
 
 ```
 {
@@ -26,4 +26,7 @@ or add script to ./package.json
     "start": "http-server -a localhost -p 8000 -c-1 ./app/"
   }
 }
+
+$ npm start
+
 ```
