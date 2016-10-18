@@ -3,6 +3,7 @@ package com.sm.samples.warehouse.rest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,6 +23,7 @@ public class ItemController {
     return "Hello, warehouse app \r\n";
   }
 
+  @CrossOrigin(origins = "http://localhost:8000")
   @RequestMapping(value = "/item", method = RequestMethod.GET)
   public List<ItemModel> getAllItems() {
     return itemService.getAllItems();
