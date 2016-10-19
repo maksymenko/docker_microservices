@@ -3,24 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Warehouse</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-	<script src="itemController.js"></script>
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="../node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="./app.js"></script>
+	<script src="./store-controller.js"></script>
+
+	<style>.active { color: red; font-weight: bolder; }</style>
 </head>
 <body>
-	<table ng-controller="ItemController">
-		<tr>
-			<th>sku</th>
-			<th>name</th>
-			<th>description</th>
-			<th>price</th>
-		</tr>
-		<tr ng-repeat="item in itemList">
-			<td>{{item.sku}}</td>
-			<td>{{item.name}}</td>
-			<td>{{item.description}}</td>
-			<td>{{item.price}}</td>
-		</tr>
-	</table>
-	
+
+	<a ui-sref="store" ui-sref-active="active">Hello</a>
+  <a ui-sref="settings" ui-sref-active="active">About</a>
+
+  <ui-view></ui-view>
+
 </body>
 </html>

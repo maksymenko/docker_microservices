@@ -5,7 +5,7 @@
   "main": "./app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app/"
+    "start": "http-server -a localhost -p 8000 -c-1 ./"
   },
   "keywords": [
     "sample",
@@ -14,6 +14,7 @@
   "author": "sergey.maksymenko@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1"
   }
 }
