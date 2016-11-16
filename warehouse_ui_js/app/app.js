@@ -19,7 +19,7 @@ config(function($stateProvider, $urlRouterProvider) {
   }
 
   // For any unmatched url, send to /route1
-//  $urlRouterProvider.otherwise("/store")
+  $urlRouterProvider.otherwise("/store")
   $stateProvider.state(storeState);
   $stateProvider.state(settingsState);
 
