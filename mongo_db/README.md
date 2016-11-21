@@ -1,47 +1,20 @@
-# Spring Boot - REST  - Jetty - Executable jar
+# Customized Mongo 3.2 Image. Creates user, password and Database.
 
-**Configure mongoDB**
+* Image is based on Official Repository mongo 3.2.
+
+**Build Image**
 ```
-$ mongo
-> use warehouse
-> show collections;
-> db.createUser({user: "mongo_usr", pwd: "mongo_pwd", roles: []});
-
+$ docker build -t wh_mongo .
 ```
 
-**Build executable jar and run**
+**Run Container**
 ```
-$ ./gradlew build && java -jar ./build/libs/Warehouse-0.0.1-SNAPSHOT.jar
-```
-
-**Run in-place** 
-```
-$ gradle bootRun
-```
-**Usage**
-* Add item
-```
-curl -i -POST -H 'Content-Type: application/json' \
--d '{"sku":"AAA125", "name":"book", "description":"fiction", "price":"123.23"}' \
-http://localhost:8080/item
+$ docker run -it -e MONGODB_USER="m_usr" -e MONGODB_PWD="m_pwd" -e MONGODB_DB="warehouse_1" wh_mongo
 ```
 
-* Show item list
-```
-curl http://localhost:8080/item
-```
-
-
-## Steps
-* Create project
-```
-$ gradle init --type=java-library
-```
-* Add Spring boot dependecies and plugin
-
+**TODO:**
+* Expose ports
 
 ----
 #### References:
-* http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
-* https://spring.io/guides/gs/spring-boot/
-* http://spring.io/guides/gs/accessing-data-mongodb/
+*  https://hub.docker.com/r/library/mongo/
