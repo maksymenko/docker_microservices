@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -m
+
 USER=${MONGODB_USER}
 PWD=${MONGODB_PWD}
 DB=${MONGODB_DB}
@@ -19,9 +21,10 @@ if [[ -z "$DB" ]]; then
   exit 1;
 fi
 
+
 echo "Init mongo"
-mongod --dbpath /mongo_data/db --httpinterface --rest --storageEngine wiredTiger &
- 
+mongod  --dbpath /mongo_data/db --httpinterface --rest --storageEngine wiredTiger &
+
 RET=1
 while [[ RET -ne 0 ]]; do
     echo ">>> Waiting for Mongo to start"
@@ -35,4 +38,6 @@ mongo admin --eval "db.createUser({user: '$USER', pwd: '$PWD', roles:[{role:'roo
 mongo admin -u $USER -p $PWD << EOF
 use $DB
 db.createUser({user: '$USER', pwd: '$PWD', roles:[{role:'dbOwner',db:'$DB'}]})
+EOF
 
+fg

@@ -11,10 +11,12 @@ $ docker build -t wh_mongo .
 ```
 $ docker run -it -e MONGODB_USER="m_usr" -e MONGODB_PWD="m_pwd" -e MONGODB_DB="warehouse_1" wh_mongo
 ```
-
-**TODO:**
-* Expose ports
+----
+##### TODO:
+* avoid using root.
+* install mongo from distributive instead of using base image.
 
 ----
 #### References:
-*  https://hub.docker.com/r/library/mongo/
+* https://hub.docker.com/r/library/mongo/
+* https://docs.docker.com/engine/examples/mongodb/
