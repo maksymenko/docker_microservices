@@ -1,5 +1,15 @@
 ## Angular JS  based UI 
 
+#### Run within docker
+* build image
+```
+$ docker build -t  warehouse_ui_node . 
+```
+* Run contained and application
+```
+docker run -d warehouse_ui_node
+```
+
 #### Install package management for JavaScript
 * download https://nodejs.org/en/download/
 ```
