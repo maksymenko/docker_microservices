@@ -3,11 +3,11 @@
 #### Run within docker
 * build image
 ```
-$ docker build -t  warehouse_ui_node . 
+$ docker build -t  warehouse_ui_node_img . 
 ```
 * Run contained and application
 ```
-docker run -d warehouse_ui_node
+$ docker run -d --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
 ```
 
 #### Install package management for JavaScript

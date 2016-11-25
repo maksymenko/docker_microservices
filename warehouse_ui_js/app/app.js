@@ -18,7 +18,7 @@ config(function($stateProvider, $urlRouterProvider) {
     template: '<h3>Settings</h3>'
   }
 
-  // For any unmatched url, send to /route1
+  // For any unmatched url, send to /store
   $urlRouterProvider.otherwise("/store")
   $stateProvider.state(storeState);
   $stateProvider.state(settingsState);
