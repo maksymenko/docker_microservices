@@ -1,5 +1,6 @@
-FROM node:6.9.1
+FROM node:6.9.1-alpine
 
+MAINTAINER Sergii Maksymenko "sergey.maksymenko@gmail.com"
 
 RUN mkdir -p /usr/src/app && chown -R node /usr/src/app
 
