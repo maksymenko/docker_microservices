@@ -3,12 +3,12 @@ Image is based on Official Repository mongo 3.2.
 
 **Build Image**
 ```
-$ docker build -t wh_mongo .
+$ docker build -t warehouse_mongo_img .
 ```
 
-**Run Container**
+**Run Container and add user**
 ```
-$ docker run -d -e MONGODB_USER="m_usr" -e MONGODB_PWD="m_pwd" -e MONGODB_DB="warehouse_1" wh_mongo
+$ docker run -d -p 27017:27017 -p 28017:28017 -e MONGODB_USER="m_usr" -e MONGODB_PWD="m_pwd" -e MONGODB_DB="warehouse" warehouse_mongo_img
 ```
 
 ----

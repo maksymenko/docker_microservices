@@ -12,13 +12,10 @@ RUN apk add --update \
 # solve issue with libnative-platform.so
 RUN apk update && apk add libstdc++ && rm -rf /var/cache/apk/*
 
-WORKDIR /usr/src/warehouse
-COPY ./ /usr/src/warehouse
+WORKDIR /usr/src/app
+COPY ./ /usr/src/app
 
-#Install Gradle
-RUN ./gradlew
-
-#Build application
+#Install Gradle and build application
 RUN ./gradlew build
 
 EXPOSE 8080

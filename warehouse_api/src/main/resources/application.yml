@@ -1,2 +1,2 @@
 spring.data:
-  mongodb.uri: mongodb://mongo_usr:mongo_pwd@localhost:27017/warehouse
+  mongodb.uri: mongodb://mongo_usr:mongo_pwd@db:27017/warehouse

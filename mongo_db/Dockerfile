@@ -8,9 +8,7 @@ RUN mkdir -p /scripts && chown -R mongodb:mongodb /scripts
 
 ADD init.sh /scripts/init.sh
 
-
 EXPOSE 27017 28017
-
 
 ENTRYPOINT ["/bin/bash", "-c"]
 

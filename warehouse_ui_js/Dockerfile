@@ -10,7 +10,8 @@ USER node
 
 WORKDIR /usr/src/app
 
-COPY ./ /usr/src/app/
+#Install required dependencies
+COPY ./package.json /usr/src/app/package.json
 RUN npm install
 
 # Bundle app source
