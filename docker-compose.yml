@@ -1,32 +1,29 @@
 version: '2'
 services:
     web:
-        build:
-            context: ./warehouse_ui_js
+        build: ./warehouse_ui_js
         image: warehouse_web_img
         container_name: warehouse_web
         ports:
             - "8001:8000"
         volumes:
-            - $PWD:/usr/src/app
+            - $PWD/warehouse_ui_js/src:/usr/src/app/src
         depends_on:
             - api
 
     api:
-        build:
-            context: ./warehouse_api
+        build: ./warehouse_api
         image: warehouse_api_img
         container_name: warehouse_api
         ports:
             - "8081:8080"
         volumes:
-            - $PWD:/usr/src/app
+            - $PWD/warehouse_api/src:/usr/src/app/src
         depends_on:
             - db
 
     db:
-        build:
-            context: ./mongo_db
+        build: ./mongo_db
         image: warehouse_mongo_img
         container_name: warehouse_mongo_db
         ports:

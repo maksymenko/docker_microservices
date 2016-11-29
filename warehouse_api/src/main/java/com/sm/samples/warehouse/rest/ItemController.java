@@ -23,7 +23,7 @@ public class ItemController {
     return "Hello, warehouse app \r\n";
   }
 
-  @CrossOrigin(origins = "http://localhost:8000")
+  @CrossOrigin(origins = {"http://localhost:8000", "http://localhost:8001", "http://172.19.0.4:8000"})
   @RequestMapping(value = "/item", method = RequestMethod.GET)
   public List<ItemModel> getAllItems() {
     return itemService.getAllItems();

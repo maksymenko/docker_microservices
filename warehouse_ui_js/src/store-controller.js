@@ -1,6 +1,6 @@
 angular.module('StoreModule', [])
     .controller('StoreController', function($scope, $http) {
-        $http.get('http://api:8080/item').
+        $http.get('http://127.0.0.1:8081/item').
             then(function successCallback(response) {
                 $scope.itemList = response.data;
             },function errorCallback(response) {
