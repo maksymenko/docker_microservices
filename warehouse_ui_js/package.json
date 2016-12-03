@@ -5,7 +5,10 @@
   "main": "./app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./"
+    "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./",
+    "clean": "rimraf dist",
+    "build:dev": "mkdir -p ./dist/js && browserify ./src/app.js -o ./dist/js/bundle.js",
+    "build:prod": "mkdir -p ./dist/js && browserify ./src/app.jss | uglifyjs -mc > ./dist/js/bundle.js"
   },
   "keywords": [
     "sample",
@@ -16,5 +19,10 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "rimraf": "^2.5.4",
+    "uglifyjs": "^2.4.10"
   }
 }

@@ -12,3 +12,8 @@
 ```
 $ docker-compose up -d
 ```
+
+**Run api and db only**
+```
+$ docker-compose up api -d
+```

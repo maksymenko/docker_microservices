@@ -1,6 +1,6 @@
 # Spring Boot - REST  - Jetty - Executable jar
 
-**Run inside docker**
+### Run inside docker
 
 * Build image 
 ```
@@ -11,6 +11,7 @@ $ docker build -t  warehouse_api_node_img .
 $ docker run -d --rm --name warehouse_api_java_app -p 8081:8080 -v "$PWD":/usr/src/app warehouse_api_node_img
 ```
 
+### Run without docker
 
 **Configure mongoDB**
 ```

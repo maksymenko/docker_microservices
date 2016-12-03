@@ -1,6 +1,6 @@
 ## Angular JS  based UI 
 
-#### Run within docker
+### Run inside docker
 * build image
 ```
 $ docker build -t  warehouse_ui_node_img . 
@@ -9,6 +9,8 @@ $ docker build -t  warehouse_ui_node_img .
 ```
 $ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
 ```
+
+### Run without docker
 
 #### Install package management for JavaScript
 * download https://nodejs.org/en/download/
@@ -51,3 +53,8 @@ $ http-server
 
 $ npm start
 ```
+
+### References
+* cleanup ***npm install rimraf --save-dev***
+* create bundle ***npm install browserify --save-dev***
+* minify  ***npm install uglifyjs --save-dev***

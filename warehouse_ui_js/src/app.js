@@ -1,5 +1,9 @@
 'use strict';
 
+var angular = require('angular');
+require('./store-controller');
+require('angular-ui-router');
+
 angular.module('warehouse', [
   'StoreModule',
   'ui.router'
