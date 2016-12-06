@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="warehouse">
+<head>
+  <meta charset="UTF-8">
+  <title>Warehouse</title>
+  <style>.active { color: red; font-weight: bolder; }</style>
+</head>
+<body>
+
+  <a ui-sref="store" ui-sref-active="active">Hello</a>
+  <a ui-sref="settings" ui-sref-active="active">About</a>
+
+  <ui-view></ui-view>
+  
+  <script src="js/bundle.js"></script>
+
+
+</body>
+</html>

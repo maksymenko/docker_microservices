@@ -5,10 +5,11 @@
   "main": "./app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./",
+    "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./dist/",
     "clean": "rimraf dist",
-    "build:dev": "mkdir -p ./dist/js && browserify ./src/app.js -o ./dist/js/bundle.js",
-    "build:prod": "mkdir -p ./dist/js && browserify ./src/app.jss | uglifyjs -mc > ./dist/js/bundle.js"
+    "prebundle": "mkdir -p ./dist/js  && cp ./src/index.html ./dist/ && cp ./src/js/*.html ./dist/",
+    "bundle": "browserify ./src/js/app.js -o ./dist/js/bundle.js",
+    "package": "npm run bundle && uglifyjs ./dist/js/bundle.js -mc -o ./dist/js/bundle.js"
   },
   "keywords": [
     "sample",
