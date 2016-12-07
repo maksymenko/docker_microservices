@@ -17,7 +17,7 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
-RUN npm run package
+RUN npm run build:minify
 
 EXPOSE 8000
 CMD [ "npm", "start" ]

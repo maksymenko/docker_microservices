@@ -6,14 +6,15 @@ require('angular-ui-router');
 
 angular.module('warehouse', [
   'StoreModule',
-  'ui.router'
+  'ui.router',
+  'app.template'
 ]).
 config(function($stateProvider, $urlRouterProvider) {
   var storeState = {
     name: 'store',
     url: '/store',
     controller: 'StoreController',
-    templateUrl: 'store.html'
+    templateUrl: './store.html'
   }
 
   var settingsState = {

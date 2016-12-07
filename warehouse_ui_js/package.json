@@ -2,14 +2,16 @@
   "name": "warehouse_ui_js",
   "version": "1.0.0",
   "description": "Sample AngularJS app",
-  "main": "./app/app.js",
+  "main": "./src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./dist/",
     "clean": "rimraf dist",
-    "prebundle": "mkdir -p ./dist/js  && cp ./src/index.html ./dist/ && cp ./src/js/*.html ./dist/",
-    "bundle": "browserify ./src/js/app.js -o ./dist/js/bundle.js",
-    "package": "npm run bundle && uglifyjs ./dist/js/bundle.js -mc -o ./dist/js/bundle.js"
+    "init": "mkdir -p ./dist && cp ./src/index.html ./dist/",
+    "build:js": "npm run init && browserify ./src/js/app.js -o ./dist/bundle.js",
+    "build:js_minify": "bundle:js && uglifyjs ./dist/bundle.js -mc -o ./dist/bundle.js",
+    "build:html": "npm run init && npm-html2js -i ./src/**/*.html -o ./dist/template.js -b src/js",
+    "build": "npm run clean && npm run init && npm run build:js && npm run build:html"
   },
   "keywords": [
     "sample",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "browserify": "^13.1.1",
+    "npm-html2js": "^0.1.8",
     "rimraf": "^2.5.4",
     "uglifyjs": "^2.4.10"
   }

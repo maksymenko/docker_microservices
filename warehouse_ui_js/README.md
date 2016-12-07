@@ -54,7 +54,8 @@ $ http-server
 $ npm start
 ```
 
-### References
+### Install dev tools
 * cleanup ***npm install rimraf --save-dev***
 * create bundle ***npm install browserify --save-dev***
 * minify  ***npm install uglifyjs --save-dev***
+* bundle html templates ***npm install npm-html2js --save-dev***
