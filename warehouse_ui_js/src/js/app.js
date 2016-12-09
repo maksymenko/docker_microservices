@@ -3,18 +3,20 @@
 var angular = require('angular');
 require('./store-controller');
 require('angular-ui-router');
+require('./store.html');
+
 
 angular.module('warehouse', [
   'StoreModule',
   'ui.router',
-  'app.template'
+  'store.html'
 ]).
 config(function($stateProvider, $urlRouterProvider) {
   var storeState = {
     name: 'store',
     url: '/store',
     controller: 'StoreController',
-    templateUrl: './store.html'
+    templateUrl: 'store.html'
   }
 
   var settingsState = {

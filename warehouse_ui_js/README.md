@@ -58,4 +58,4 @@ $ npm start
 * cleanup ***npm install rimraf --save-dev***
 * create bundle ***npm install browserify --save-dev***
 * minify  ***npm install uglifyjs --save-dev***
-* bundle html templates ***npm install npm-html2js --save-dev***
+* broserify plugin for angular templates ***npm install browserify-ng-html2js --save-dev***
