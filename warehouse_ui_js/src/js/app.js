@@ -5,7 +5,7 @@ import uiRouter from 'angular-ui-router';
 import StoreController from './store-controller';
 
 
-angular.module('warehouse', [
+export default angular.module('warehouse', [
   'StoreModule',
   uiRouter
 ]).
@@ -14,7 +14,7 @@ config(function($stateProvider, $urlRouterProvider) {
     name: 'store',
     url: '/store',
     controller: 'StoreController',
-    templateUrl: require('./store.html')
+    template: require('./store.html')
   }
 
   var settingsState = {

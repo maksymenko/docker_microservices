@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
      entry: './src/js/app.js',
@@ -11,7 +10,10 @@ module.exports = {
          loaders: [{
              test: /\.js$/,
              exclude: /node_modules/,
-             loader: 'babel-loader'
+             loader: 'babel-loader',
+             options: {
+               presets: ["es2015"]
+             }
           }, { 
             test: /\.css$/, 
             loader: "style!css" 

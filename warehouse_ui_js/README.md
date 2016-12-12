@@ -60,6 +60,5 @@ $ npm start
     * ***npm install webpack --save-dev***
     * ***npm install --save-dev babel-core babel-preset-es2015***
     * ***npm install --save-dev babel-loader*** 
-    * ***npm install --save-dev html-webpack-plugin***
     * ***npm install --save-dev css-loader***
     * ***npm install --save-dev raw-loader***
