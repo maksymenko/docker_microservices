@@ -4,16 +4,17 @@
   "description": "Sample AngularJS app",
   "main": "./src/js/app.js",
   "browserify": {
-    "transform": ["browserify-ng-html2js"]
+    "transform": [
+      "browserify-ng-html2js"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./dist/",
     "clean": "rimraf dist",
-    "init": "mkdir -p ./dist",
+    "init": "npm run clean && mkdir -p ./dist",
     "prebuild": "npm run init && cp ./src/index.html ./dist/",
-    "build": "browserify ./src/js/app.js -o ./dist/bundle.js",
-    "build:minify": "npm run build && uglifyjs ./dist/bundle.js -o ./dist/bundle.js"
+    "build": "webpack --bail --progress --profile"
   },
   "keywords": [
     "sample",
@@ -26,9 +27,13 @@
     "angular-ui-router": "^0.3.1"
   },
   "devDependencies": {
-    "browserify": "^13.1.1",
-    "browserify-ng-html2js": "^1.3.0",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.24.1",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
-    "uglifyjs": "^2.4.10"
+    "webpack": "^1.14.0"
   }
 }

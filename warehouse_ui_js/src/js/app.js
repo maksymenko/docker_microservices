@@ -1,22 +1,20 @@
 'use strict';
 
-var angular = require('angular');
-require('./store-controller');
-require('angular-ui-router');
-require('./store.html');
+import angular from 'angular';
+import uiRouter from 'angular-ui-router';
+import StoreController from './store-controller';
 
 
 angular.module('warehouse', [
   'StoreModule',
-  'ui.router',
-  'store.html'
+  uiRouter
 ]).
 config(function($stateProvider, $urlRouterProvider) {
   var storeState = {
     name: 'store',
     url: '/store',
     controller: 'StoreController',
-    templateUrl: 'store.html'
+    templateUrl: require('./store.html')
   }
 
   var settingsState = {
