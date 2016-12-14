@@ -54,6 +54,12 @@ $ http-server
 $ npm start
 ```
 
+### JavaScript bundling tools
+There sevaral branches in this repositoey which uses different bundling approaches:
+* [browserify](https://github.com/semaks/docker_microservices/tree/browserify_require_bundle/warehouse_ui_js)
+* [webpack](https://github.com/semaks/docker_microservices/tree/webpack_es6_import/warehouse_ui_js) (site https://webpack.js.org/)
+* jspm (site http://jspm.io/)
+
 ### Install dev tools
 * cleanup ***npm install rimraf --save-dev***
 * webpack bundling 
