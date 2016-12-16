@@ -1,3 +1,19 @@
 <div>
-  Catalog
+	<table>
+		<tr>
+			<th>sku</th>
+			<th>name</th>
+			<th>description</th>
+			<th>price</th>
+		</tr>
+		<tr ng-repeat="item in $ctrl.items">
+			<td>{{item.sku}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.price}}</td>
+		</tr>
+	</table>
+	<div>
+		{{message}}
+	</div>
 </div>
