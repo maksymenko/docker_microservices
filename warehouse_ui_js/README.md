@@ -1,16 +1,6 @@
-## Angular JS  based UI 
+## AngularJS ES6 application
 
-### Run inside docker
-* build image
-```
-$ docker build -t  warehouse_ui_node_img . 
-```
-* Run contained and application
-```
-$ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
-```
-
-### Run without docker
+### Quick start
 
 #### Install package management for JavaScript
 * download https://nodejs.org/en/download/
@@ -21,6 +11,34 @@ $ wget https://nodejs.org/dist/v4.6.0/node-v4.6.0-linux-x64.tar.xz
 ```
 $ sudo npm install npm -g
 ```
+* Resolve dependencies
+```
+$ npm install
+```
+* Build application
+```
+$ npm run build
+```
+* Start server
+```
+$ npm start
+```
+
+### Quick start with docker
+* build image
+```
+$ docker build -t  warehouse_ui_node_img . 
+```
+* Run contained and application
+```
+$ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
+```
+
+---
+
+## Overview
+
+### Initialize AnguarJS application from scratch
 * init npm project
 ```
 $ npm init  # creates and initialize package.json
@@ -34,7 +52,7 @@ $ npm install angular --save
 $ npm install
 ```
 
-#### http-server plugin
+### Configure server (http-server plugin)
 ```
 $ npm install http-server -g
 ```
@@ -53,7 +71,7 @@ $ http-server
 
 $ npm start
 ```
-### JavaScript bundling tools
+### JavaScript bundling
 There sevaral branches in this repositoey which uses different bundling approaches:
 * [browserify](https://github.com/semaks/docker_microservices/tree/browserify_require_bundle/warehouse_ui_js)
 * [webpack](https://github.com/semaks/docker_microservices/tree/webpack_es6_import/warehouse_ui_js) (site https://webpack.js.org/)
@@ -70,3 +88,8 @@ There sevaral branches in this repositoey which uses different bundling approach
     * ***npm install --save-dev jshint-loader***
     * ***npm install --save-dev jshint***
     * ***npm install --save-dev ng-annotate-loader***
+
+### Adding Material design
+```
+$ npm install angular-material --save
+```
