@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 module.exports = {
+    devtool: 'sourcemap',
      entry: './src/app/app.module.js',
      output: {
          path: './dist',
@@ -10,7 +11,7 @@ module.exports = {
          loaders: [{
              test: /\.js$/,
              exclude: /node_modules/,
-             loader: 'babel-loader'
+             loaders: ['ng-annotate-loader', 'babel-loader?presets[]=es2015']
           }, { 
             test: /\.css$/, 
             loader: "style!css" 

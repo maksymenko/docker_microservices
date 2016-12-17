@@ -62,8 +62,11 @@ There sevaral branches in this repositoey which uses different bundling approach
 ### Install dev tools
 * cleanup ***npm install rimraf --save-dev***
 * webpack bundling 
-    * ***npm install webpack --save-dev***
+    * ***npm install --save-dev webpack***
     * ***npm install --save-dev babel-core babel-preset-es2015***
     * ***npm install --save-dev babel-loader*** 
     * ***npm install --save-dev css-loader***
     * ***npm install --save-dev raw-loader***
+    * ***npm install --save-dev jshint-loader***
+    * ***npm install --save-dev jshint***
+    * ***npm install --save-dev ng-annotate-loader***
