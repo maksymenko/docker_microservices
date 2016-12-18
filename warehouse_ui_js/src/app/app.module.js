@@ -17,7 +17,7 @@ export default angular.module('warehouse', [
     'ngInject';
     $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
-        .accentPalette('indigo')
+        .accentPalette('teal')
         .warnPalette('red');
   })
   .component('app', AppComponent)
