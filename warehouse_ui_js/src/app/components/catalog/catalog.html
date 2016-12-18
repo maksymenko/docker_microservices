@@ -1,19 +1,49 @@
-<div>
-	<table>
-		<tr>
-			<th>sku</th>
-			<th>name</th>
-			<th>description</th>
-			<th>price</th>
-		</tr>
-		<tr ng-repeat="item in $ctrl.items">
-			<td>{{item.sku}}</td>
-			<td>{{item.name}}</td>
-			<td>{{item.description}}</td>
-			<td>{{item.price}}</td>
-		</tr>
-	</table>
-	<div>
-		{{$ctrl.message}}
-	</div>
-</div>
+<md-list>
+  <md-subheader
+      class="catalog-line-header">
+    <div layout="row">
+      <div flex>
+        sku
+      </div>
+      <div flex>
+        Name
+      </div>
+      <div flex>
+        Description
+      </div>
+      <div flex>
+        price
+     </div>
+    </div>
+  </md-subheader>
+  <md-list-item 
+      ng-repeat="item in $ctrl.items" 
+      class="catalog-line" ng-click="null">
+    <div flex layout="row">
+      <div flex>
+        {{item.sku}}
+      </div>
+      <div flex>
+        {{item.name}}
+      </div>
+      <div flex>
+       {{item.description}}
+      </div>
+      <div flex>
+        {{item.price}}
+      </div>
+    </div>
+  </md-list-item>
+</md-list>
+<md-button class="md-fab md-accent" ng-click="$ctrl.addItem()">
+  <md-icon>ADD</md-icon>
+</md-button>
+
+<md-button class="md-fab md-warn" ng-click="$ctrl.addItem()">
+  <md-icon>ADD</md-icon>
+</md-button>
+
+
+  <md-button class="md-fab md-mini" aria-label="Eat cake">
+    <md-icon md-svg-src="img/icons/ic_add_black_36px.svg"></md-icon>
+  </md-button>

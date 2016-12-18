@@ -1,17 +1,25 @@
 class CatalogController {
-  constructor($http, $scope, catalogService) {
+  constructor($http, $scope, $mdToast, catalogService) {
     "ngInject";
-    this.items = [];
-    this.message;
 
     catalogService.loadCatalog().then(
       (response) => {
-        this.items = response
+        this.items = response;
       },
       (err) => {
-        this.message = 'error from server' + err;
+        $mdToast.simple()
+          .textContent('Error from serve ' + err)
+          .hideDelay(3000)
+          .highlightClass('md-accent');
       }
     );
+  }
+
+  addItem() {
+    $mdToast.simple()
+      .textContent('Action is not implemented')
+      .hideDelay(3000)
+      .highlightClass('md-accent');
   }
 };
 

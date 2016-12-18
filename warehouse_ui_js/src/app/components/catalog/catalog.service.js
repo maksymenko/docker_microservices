@@ -1,7 +1,7 @@
 class CatalogService {
 
   constructor($http, $q) {
-    "ngInject";
+    'ngInject';
     this._$http = $http;
     this._$q = $q;
   }

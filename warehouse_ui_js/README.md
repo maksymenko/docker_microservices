@@ -38,14 +38,18 @@ $ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/sr
 
 ## Overview
 
-### Initialize AnguarJS application from scratch
+### npm is used to resolve dependensies and run scripts (build, start...)
+* dependensies repository (https://www.npmjs.com/)
+
+### Create AnguarJS application from scratch
 * init npm project
 ```
 $ npm init  # creates and initialize package.json
 ```
-* Add dependencies (https://www.npmjs.com/)
+* Add Angular and ui-route dependencies 
 ```
 $ npm install angular --save
+$ npm install angular-ui-router --save
 ```
 * Resolve dependencies
 ```
@@ -92,4 +96,6 @@ There sevaral branches in this repositoey which uses different bundling approach
 ### Adding Material design
 ```
 $ npm install angular-material --save
+$ npm install angular-animate --save
+$ npm install angular-aria --save
 ```

@@ -18,6 +18,9 @@ module.exports = {
           }, {
             test: /\.html$/,
             loader: 'raw'
-          }]
+          }, {
+             test: /\.svg$/,
+             loader: 'raw'
+        }]
      }
  };

@@ -1,4 +1,4 @@
-import CatalogController from './catalog.controller'
+import CatalogController from './catalog.controller';
 import templateUrl from './catalog.html';
 
 export default {
