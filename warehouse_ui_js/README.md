@@ -29,7 +29,7 @@ $ npm start
 ```
 $ docker build -t  warehouse_ui_node_img . 
 ```
-* Run contained and application
+* Run container and application
 ```
 $ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
 ```
@@ -92,6 +92,8 @@ There sevaral branches in this repositoey which uses different bundling approach
     * ***npm install --save-dev jshint-loader***
     * ***npm install --save-dev jshint***
     * ***npm install --save-dev ng-annotate-loader***
+    * ***npm install --save-dev url-loader***
+    * ***npm install --save-dev material-design-icons***
 
 ### Adding Material design
 ```

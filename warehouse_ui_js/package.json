@@ -15,14 +15,14 @@
     "clean": "rimraf dist",
     "init": "npm run clean && mkdir -p ./dist",
     "prebuild": "npm run init && cp ./src/index.html ./dist/",
-    "build": "webpack -d --bail --progress --profile"
+    "build": "webpack -d --progress"
   },
   "keywords": [
     "sample",
     "angular"
   ],
   "author": "sergey.maksymenko@gmail.com",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "angular": "^1.6.0",
     "angular-animate": "^1.6.0",
@@ -36,10 +36,14 @@
     "css-loader": "^0.26.1",
     "jshint": "^2.9.4",
     "jshint-loader": "^0.8.3",
+    "material-design-icons": "^3.0.1",
+    "mdi": "^1.7.22",
     "ng-annotate": "^1.2.1",
     "ng-annotate-loader": "^0.2.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
+    "svg-loader": "0.0.2",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0"
   }
 }

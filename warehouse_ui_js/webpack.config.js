@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'sourcemap',
      entry: './src/app/app.module.js',
      output: {
          path: './dist',
@@ -13,14 +12,14 @@ module.exports = {
              exclude: /node_modules/,
              loaders: ['ng-annotate-loader', 'babel-loader?presets[]=es2015']
           }, { 
-            test: /\.css$/, 
-            loader: "style!css" 
+             test: /\.css$/, 
+             loader: "style!css" 
           }, {
-            test: /\.html$/,
-            loader: 'raw'
-          }, {
-             test: /\.svg$/,
+             test: /\.html$/,
              loader: 'raw'
-        }]
+          }, { 
+             test: /\.(woff|woff2|ttf|eot|svg|png|jpg)$/, 
+             loader: 'url-loader?limit=8192&name=res/[name].[ext]?' // inline base64 URLs for <=8k images, direct URLs for the rest
+          }]
      }
  };
