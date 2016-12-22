@@ -19,7 +19,7 @@ module.exports = {
              loader: 'raw'
           }, { 
              test: /\.(woff|woff2|ttf|eot|svg|png|jpg)$/, 
-             loader: 'url-loader?limit=8192&name=res/[name].[ext]?' // inline base64 URLs for <=8k images, direct URLs for the rest
+             loader: 'url-loader?limit=8192&name=res/[hash:12].[ext]?' // inline base64 URLs for <=8k images, direct URLs for the rest
           }]
      }
  };

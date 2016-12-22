@@ -44,7 +44,7 @@ $ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/sr
 ### Create AnguarJS application from scratch
 * init npm project
 ```
-$ npm init  # creates and initialize package.json
+$ npm init  // creates and initialize package.json
 ```
 * Add Angular and ui-route dependencies 
 ```
@@ -100,4 +100,30 @@ There sevaral branches in this repositoey which uses different bundling approach
 $ npm install angular-material --save
 $ npm install angular-animate --save
 $ npm install angular-aria --save
+```
+
+#### Icon set usage
+```
+import svg_icons from './img/icons/svg-sprite-content.svg';
+...
+
+export default angular.module('warehouse', [
+    ngMaterial,
+  ])
+  .config(($mdIconProvider, $mdThemingProvider) => {
+    'ngInject';
+
+    $mdIconProvider.iconSet('svg_icons', svg_icons);
+     
+    $mdThemingProvider.theme('default')
+        .primaryPalette('blue-grey')
+        .accentPalette('amber')
+        .warnPalette('red');
+  });
+
+....
+<md-button class="md-fab md-accent" ng-click="$ctrl.addItem()">
+  <md-icon md-svg-src="svg_icons:ic_add_24px"></md-icon>
+</md-button>
+
 ```
