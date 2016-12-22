@@ -6,6 +6,7 @@ import ngMaterial from 'angular-material';
 import 'angular-material/angular-material.css';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
+import svg_icons from './img/icons/svg-sprite-content.svg';
 
 export default angular.module('warehouse', [
     ngMaterial,
@@ -15,9 +16,11 @@ export default angular.module('warehouse', [
   .config(($mdIconProvider, $mdThemingProvider) => {
     'ngInject';
 
+    $mdIconProvider.iconSet('svg_icons' , svg_icons);
+     
     $mdThemingProvider.theme('default')
         .primaryPalette('blue-grey')
-        .accentPalette('teal')
+        .accentPalette('amber')
         .warnPalette('red');
   })
   .component('app', AppComponent)
