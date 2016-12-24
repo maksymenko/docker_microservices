@@ -85,6 +85,9 @@ There sevaral branches in this repositoey which uses different bundling approach
 * cleanup ***npm install rimraf --save-dev***
 * webpack bundling 
     * ***npm install --save-dev webpack***
+    * ***npm install --save-dev clean-webpack-plugin***
+    * ***npm install -g webpack-dev-server***
+    * ***npm install --save-dev html-webpack-plugin***
     * ***npm install --save-dev babel-core babel-preset-es2015***
     * ***npm install --save-dev babel-loader*** 
     * ***npm install --save-dev css-loader***
@@ -102,7 +105,7 @@ $ npm install angular-animate --save
 $ npm install angular-aria --save
 ```
 
-#### Icon set usage
+### Icon set usage
 ```
 import svg_icons from './img/icons/svg-sprite-content.svg';
 ...
@@ -110,15 +113,11 @@ import svg_icons from './img/icons/svg-sprite-content.svg';
 export default angular.module('warehouse', [
     ngMaterial,
   ])
-  .config(($mdIconProvider, $mdThemingProvider) => {
+  .config(($mdIconProvider) => {
     'ngInject';
 
     $mdIconProvider.iconSet('svg_icons', svg_icons);
-     
-    $mdThemingProvider.theme('default')
-        .primaryPalette('blue-grey')
-        .accentPalette('amber')
-        .warnPalette('red');
+
   });
 
 ....

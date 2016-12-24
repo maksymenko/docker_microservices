@@ -17,6 +17,6 @@ class CatalogService {
     );
     return deferred.promise;
   }
-};
+}
 
 export default CatalogService;

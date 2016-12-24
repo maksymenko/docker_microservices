@@ -24,6 +24,6 @@ class CatalogController {
         .hideDelay(3000)
         .highlightClass('md-accent'));
   }
-};
+}
 
 export default CatalogController;
