@@ -1,7 +1,6 @@
 class CatalogController {
+  /*@ngInject*/
   constructor($http, $scope, $mdToast, catalogService) {
-    "ngInject";
-
     this._$mdToast = $mdToast;
     catalogService.loadCatalog().then(
       (response) => {

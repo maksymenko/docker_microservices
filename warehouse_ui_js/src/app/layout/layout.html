@@ -1,0 +1,31 @@
+<div class="layout-container" layout="column">
+  <md-toolbar layout="row">
+    <md-button ng-click="$ctrl.toggleMenu()" hide-gt-xs>
+      <md-icon>menu</md-icon>
+    </md-button>
+    <h3 class="md-padding">Warehouse application</h3>
+  </md-toolbar>
+  <div class="layout-content-container" layout="row" flex>
+    <md-sidenav md-is-locked-open="$mdMedia('gt-xs')"
+        md-component-id="layout-left-menu"
+        layout="column"
+        layout-align="start start"
+        class="md-whiteframe-4dp">
+      <md-list ng-click="$ctrl.toggleMenu()">
+        <md-list-item>
+          <md-button ui-sref="about" ui-sref-active="active">
+            About
+          </md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button ui-sref="catalog" ui-sref-active="active">
+            Catalog
+          </md-button>
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
+    <md-content flex>
+      <div ui-view></div>
+    </md-content>
+  </div>
+</div>

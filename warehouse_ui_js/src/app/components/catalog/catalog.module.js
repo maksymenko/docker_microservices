@@ -8,11 +8,20 @@ import 'material-design-icons/iconfont/material-icons.css';
 import './catalog.css';
 
 export const CatalogModule = angular
-  .module('catalogMdule', [
+  .module('catalogModule', [
     ngMaterial,
     uiRouter
   ])
   .service('catalogService', CatalogService)
   .controller('catalogController', CatalogController)
   .component(CatalogComponent.name, CatalogComponent.config)
+  .config(($stateProvider) => {
+    'ngInject';
+
+    $stateProvider
+      .state('catalog', {
+        url: '/catalog',
+        component: CatalogComponent.name
+      });
+  })
   .name;

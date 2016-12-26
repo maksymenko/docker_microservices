@@ -1,4 +1,4 @@
-# AngularJS ES6 application
+# AngularJS, ES6, webpack, material-design
 
 ## Quick start locally
 
@@ -7,20 +7,11 @@
 ```
 $ wget https://nodejs.org/dist/v4.6.0/node-v4.6.0-linux-x64.tar.xz
 ```
-* Update npm
+* Update npm, resolve dependencies, build and start application.
 ```
 $ sudo npm install npm -g
-```
-* Resolve dependencies
-```
 $ npm install
-```
-* Build application
-```
 $ npm run build
-```
-* Start server
-```
 $ npm start
 ```
 
@@ -52,17 +43,10 @@ $ npm init  // creates and initialize package.json
 $ npm install angular --save
 $ npm install angular-ui-router --save
 ```
-* Resolve dependencies
-```
-$ npm install
-```
 
 #### Setup http server
 ```
 $ npm install http-server -g
-```
-* Run local http server 
-```
 $ http-server
 ```
 * Add script to ./package.json and use start command
@@ -76,17 +60,19 @@ $ http-server
 
 $ npm start
 ```
-#### Bundle project and all dependencies
+#### Bundle project and all dependencies/resources
 * Webpack is powerfull tool to build and bundle application and all dependencies.
-    * site https://webpack.js.org/)
+    * https://webpack.js.org/
 * Alternative approaches is to use *browerify* of *jspm* (http://jspm.io/).
+
+webpack-dev-server dev server start application and listen changes in application to redeploy on fly.
 
 #### Install dev tools
 * cleanup ***npm install rimraf --save-dev***
 * webpack bundling 
     * ***npm install --save-dev webpack***
     * ***npm install --save-dev clean-webpack-plugin***
-    * ***npm install -g webpack-dev-server***
+    * ***npm install --save-dev webpack-dev-server***
     * ***npm install --save-dev html-webpack-plugin***
     * ***npm install --save-dev babel-core babel-preset-es2015***
     * ***npm install --save-dev babel-loader*** 
@@ -111,6 +97,11 @@ $ npm install angular-animate --save
 $ npm install angular-aria --save
 ```
 
+Usefull resources: 
+* https://material.angularjs.org/
+* https://github.com/angular/material-start/tree/es6
+* https://material.io/icons/
+
 ### Icon usage
 ```
 import svg_icons from './img/icons/svg-sprite-content.svg';
@@ -132,3 +123,15 @@ export default angular.module('warehouse', [
 </md-button>
 
 ```
+
+#### JavaScript code alalizing tool
+* http://jshint.com
+* Add configuration file for code alalyzer.
+```
+.jshintrc
+```
+
+#### Unit tests (TBD)
+* test runner:  https://karma-runner.github.io
+* BDD framework: Jasmin https://jasmine.github.io
+* E2E testa:  https://github.com/angular/protractor

@@ -1,9 +1,7 @@
+import layoutTemplate from './layout/layout.html';
+import LayoutController from './layout/layout.controller';
+
 export const AppComponent = {
-  template: `
-    <div>
-      <catalog />
-      <md-icon>add</md-icon>
-      <div ui-view></div>
-    <div>
-    `
+  template: layoutTemplate,
+  controller: LayoutController
 };
