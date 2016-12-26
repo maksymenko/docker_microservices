@@ -1,6 +1,6 @@
-## AngularJS ES6 application
+# AngularJS ES6 application
 
-### Quick start
+## Quick start locally
 
 #### Install package management for JavaScript
 * download https://nodejs.org/en/download/
@@ -24,7 +24,7 @@ $ npm run build
 $ npm start
 ```
 
-### Quick start with docker
+## Quick start with docker
 * build image
 ```
 $ docker build -t  warehouse_ui_node_img . 
@@ -39,14 +39,15 @@ $ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/sr
 ## Overview
 
 ### npm is used to resolve dependensies and run scripts (build, start...)
-* dependensies repository (https://www.npmjs.com/)
+* Package management tool https://nodejs.org/en/download/
+* Dependensies repository (https://www.npmjs.com/)
 
-### Create AnguarJS application from scratch
+### Create application from scratch
 * init npm project
 ```
 $ npm init  // creates and initialize package.json
 ```
-* Add Angular and ui-route dependencies 
+#### Add AngularJS dependencies 
 ```
 $ npm install angular --save
 $ npm install angular-ui-router --save
@@ -56,7 +57,7 @@ $ npm install angular-ui-router --save
 $ npm install
 ```
 
-### Configure server (http-server plugin)
+#### Setup http server
 ```
 $ npm install http-server -g
 ```
@@ -75,13 +76,12 @@ $ http-server
 
 $ npm start
 ```
-### JavaScript bundling
-There sevaral branches in this repositoey which uses different bundling approaches:
-* [browserify](https://github.com/semaks/docker_microservices/tree/browserify_require_bundle/warehouse_ui_js)
-* [webpack](https://github.com/semaks/docker_microservices/tree/webpack_es6_import/warehouse_ui_js) (site https://webpack.js.org/)
-* jspm (site http://jspm.io/)
+#### Bundle project and all dependencies
+* Webpack is powerfull tool to build and bundle application and all dependencies.
+    * site https://webpack.js.org/)
+* Alternative approaches is to use *browerify* of *jspm* (http://jspm.io/).
 
-### Install dev tools
+#### Install dev tools
 * cleanup ***npm install rimraf --save-dev***
 * webpack bundling 
     * ***npm install --save-dev webpack***
@@ -98,6 +98,12 @@ There sevaral branches in this repositoey which uses different bundling approach
     * ***npm install --save-dev url-loader***
     * ***npm install --save-dev material-design-icons***
 
+### Application structure 
+* Style guide to organise application
+    * https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
+    * https://github.com/johnpapa/ng-demos/tree/master/modular
+    * https://github.com/toddmotto/angular-styleguide
+
 ### Adding Material design
 ```
 $ npm install angular-material --save
@@ -105,7 +111,7 @@ $ npm install angular-animate --save
 $ npm install angular-aria --save
 ```
 
-### Icon set usage
+### Icon usage
 ```
 import svg_icons from './img/icons/svg-sprite-content.svg';
 ...
