@@ -60,29 +60,29 @@ $ http-server
 
 $ npm start
 ```
-#### Bundle project and all dependencies/resources
+### Bundle project and all dependencies/resources
 * Webpack is powerfull tool to build and bundle application and all dependencies.
     * https://webpack.js.org/
 * Alternative approaches is to use *browerify* of *jspm* (http://jspm.io/).
 
 webpack-dev-server dev server start application and listen changes in application to redeploy on fly.
+```
+npm run devserver
+```
 
 #### Install dev tools
-* cleanup ***npm install rimraf --save-dev***
-* webpack bundling 
-    * ***npm install --save-dev webpack***
-    * ***npm install --save-dev clean-webpack-plugin***
-    * ***npm install --save-dev webpack-dev-server***
-    * ***npm install --save-dev html-webpack-plugin***
-    * ***npm install --save-dev babel-core babel-preset-es2015***
-    * ***npm install --save-dev babel-loader*** 
-    * ***npm install --save-dev css-loader***
-    * ***npm install --save-dev raw-loader***
-    * ***npm install --save-dev jshint-loader***
-    * ***npm install --save-dev jshint***
-    * ***npm install --save-dev ng-annotate-loader***
-    * ***npm install --save-dev url-loader***
-    * ***npm install --save-dev material-design-icons***
+* ***npm install --save-dev webpack***
+* ***npm install --save-dev clean-webpack-plugin***
+* ***npm install --save-dev webpack-dev-server***
+* ***npm install --save-dev html-webpack-plugin***
+* ***npm install --save-dev babel-core babel-preset-es2015***
+* ***npm install --save-dev babel-loader*** 
+* ***npm install --save-dev css-loader***
+* ***npm install --save-dev raw-loader***
+* ***npm install --save-dev jshint-loader***
+* ***npm install --save-dev jshint***
+* ***npm install --save-dev ng-annotate-loader***
+* ***npm install --save-dev url-loader***
 
 ### Application structure 
 * Style guide to organise application
@@ -95,6 +95,7 @@ webpack-dev-server dev server start application and listen changes in applicatio
 $ npm install angular-material --save
 $ npm install angular-animate --save
 $ npm install angular-aria --save
+$ npm install material-design-icons --save-dev
 ```
 
 Usefull resources: 
