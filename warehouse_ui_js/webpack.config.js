@@ -7,6 +7,11 @@ const pkg = require('./package.json');
 const srcPath = path.join(__dirname, 'src');
 const distPath = path.join(__dirname, 'dist');
 
+const minimizeOptions = {
+    conservativeCollapse: false,
+    preserveLineBreaks: false
+};
+
 module.exports = {
   entry: {
     app: [path.join(srcPath, 'app/app.module.js')]
@@ -24,9 +29,11 @@ module.exports = {
         test: /\.css$/, 
         loader: "style!css" 
       }, {
-        test: /\.html$/,
-        loader: 'raw'
-      }, { 
+            test: /\.html$/,
+             exclude: [path.join(srcPath, 'index.html')], 
+            loader: 'ng-cache?minimizeOptions=' + JSON.stringify(minimizeOptions)
+        },
+       {
         test: /\.(woff|woff2|ttf|eot|svg|png|jpg)$/, 
         loader: 'url-loader?limit=8192&name=res/[hash:12].[ext]?' // inline base64 URLs for <=8k images, direct URLs for the rest
       }],

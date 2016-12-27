@@ -78,11 +78,13 @@ npm run devserver
 * ***npm install --save-dev babel-core babel-preset-es2015***
 * ***npm install --save-dev babel-loader*** 
 * ***npm install --save-dev css-loader***
-* ***npm install --save-dev raw-loader***
 * ***npm install --save-dev jshint-loader***
 * ***npm install --save-dev jshint***
 * ***npm install --save-dev ng-annotate-loader***
 * ***npm install --save-dev url-loader***
+
+* ***npm install --save-dev ngtemplate-loader***
+* ***npm install --save-dev  ng-cache-loader***
 
 ### Application structure 
 * Style guide to organise application
