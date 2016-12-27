@@ -6,7 +6,7 @@ class CatalogService {
   }
 
   loadCatalog() {
-    let itemsResource = this._$resource('http://127.0.0.1:8081/i1tem');
+    let itemsResource = this._$resource('http://127.0.0.1:8081/item');
     return itemsResource.query();
   }
 }
