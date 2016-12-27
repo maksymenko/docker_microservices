@@ -40,8 +40,9 @@ $ npm init  // creates and initialize package.json
 ```
 #### Add AngularJS dependencies 
 ```
-$ npm install angular --save
-$ npm install angular-ui-router --save
+$ npm install --save angular
+$ npm install --save angular-ui-router
+$ npm install --save angular-resource  //rest functionalty as of 1.5  https://docs.angularjs.org/tutorial/step_13
 ```
 
 #### Setup http server
@@ -83,8 +84,8 @@ npm run devserver
 * ***npm install --save-dev ng-annotate-loader***
 * ***npm install --save-dev url-loader***
 
-* ***npm install --save-dev ngtemplate-loader***
 * ***npm install --save-dev  ng-cache-loader***
+* ***npm install --save-dev angular-resource***
 
 ### Application structure 
 * Style guide to organise application

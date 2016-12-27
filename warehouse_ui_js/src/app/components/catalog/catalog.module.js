@@ -1,5 +1,6 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ngResource from 'angular-resource';
 import ngMaterial from 'angular-material';
 import CatalogComponent from './catalog.component';
 import CatalogService from './catalog.service';
@@ -10,7 +11,8 @@ import './catalog.css';
 export const CatalogModule = angular
   .module('catalogModule', [
     ngMaterial,
-    uiRouter
+    uiRouter,
+    ngResource
   ])
   .service('catalogService', CatalogService)
   .controller('catalogController', CatalogController)

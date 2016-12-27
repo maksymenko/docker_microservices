@@ -2,11 +2,13 @@ class CatalogController {
   /*@ngInject*/
   constructor($http, $scope, $mdToast, catalogService) {
     this._$mdToast = $mdToast;
-    catalogService.loadCatalog().then(
-      (response) => {
-        this.items = response;
-      },
+
+    this.items = catalogService.loadCatalog();
+
+    this.items.$promise.then(
+      null,
       (err) => {
+        debugger;
         this._$mdToast.show(
           this._$mdToast.simple()
             .textContent('Error from serve ' + err)
