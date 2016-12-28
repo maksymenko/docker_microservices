@@ -16,7 +16,7 @@ angular
       });
 
     let body = document.getElementsByTagName("body")[0];
-    var appElement = document.createElement("app");
+    var appElement = document.createElement("layout");
     body.appendChild(appElement);
     angular.bootstrap( body, [ 'appStarter' ], {
       strictDi: true
