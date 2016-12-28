@@ -14,7 +14,7 @@ const minimizeOptions = {
 
 module.exports = {
   entry: {
-    app: [path.join(srcPath, 'app/app.module.js')]
+    app: [path.join(srcPath, 'app/core/boot.js')]
   },
   output: {
     path: path.join(distPath),

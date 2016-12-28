@@ -42,7 +42,7 @@ $ npm init  // creates and initialize package.json
 ```
 $ npm install --save angular
 $ npm install --save angular-ui-router
-$ npm install --save angular-resource  //rest functionalty as of 1.5  https://docs.angularjs.org/tutorial/step_13
+$ npm install --save angular-resource
 ```
 
 #### Setup http server
@@ -55,7 +55,7 @@ $ http-server
 {
   "name": "my_server",
   "scripts": {
-    "start": "http-server -a localhost -p 8000 -c-1 ./app/"
+    "start": "http-server -a localhost -p 8000 -c-1 ./dist/"
   }
 }
 
