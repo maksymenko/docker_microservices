@@ -8,7 +8,6 @@ class CatalogController {
     this.items.$promise.then(
       null,
       (err) => {
-        debugger;
         this._$mdToast.show(
           this._$mdToast.simple()
             .textContent('Error from serve ' + err)
