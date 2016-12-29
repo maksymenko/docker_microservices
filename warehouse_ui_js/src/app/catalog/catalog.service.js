@@ -1,7 +1,7 @@
 class CatalogService {
 
+  /* @ngInject */
   constructor($resource) {
-    'ngInject';
     this._$resource = $resource;
   }
 

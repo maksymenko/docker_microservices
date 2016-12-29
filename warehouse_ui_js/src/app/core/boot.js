@@ -11,8 +11,8 @@ angular
   .ready( function() {
     angular
       .module( 'appStarter', [ App ] )
-      .run(()=>{
-        console.log('>>>> Running the aprlication');
+      .run(() => {
+        console.log('>>>> Running the application');
       });
 
     let body = document.getElementsByTagName("body")[0];
