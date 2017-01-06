@@ -18,11 +18,15 @@ $ npm start
 ## Quick start with docker
 * build image
 ```
-$ docker build -t  warehouse_ui_node_img . 
+$ docker build -t  web_client_img .
 ```
 * Run container and application
 ```
-$ docker run -d --rm --name warehouse_ui_node_app -p 8001:8000 -v "$PWD":/usr/src/app warehouse_ui_node_img
+$ docker run -d --name web_client_cont -p 8001:8000 -v "$PWD":/usr/web_client web_client_img
+```
+* ssh console to container
+```
+docker exec -it web_client_cont sh
 ```
 
 ---
