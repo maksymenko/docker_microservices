@@ -70,7 +70,7 @@ $ npm start
     * https://webpack.js.org/
 * Alternative approaches is to use *browerify* of *jspm* (http://jspm.io/).
 
-webpack-dev-server dev server start application and listen changes in application to redeploy on fly.
+* ***webpack-dev-server*** dev server starts application and listen changes in source folder to redeploy on fly.
 ```
 npm run devserver
 ```
