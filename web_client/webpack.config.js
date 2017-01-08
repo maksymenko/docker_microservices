@@ -29,11 +29,10 @@ module.exports = {
         test: /\.css$/, 
         loader: "style!css" 
       }, {
-            test: /\.html$/,
-             exclude: [path.join(srcPath, 'index.html')], 
-            loader: 'ng-cache?minimizeOptions=' + JSON.stringify(minimizeOptions)
-        },
-       {
+        test: /\.html$/,
+        exclude: [path.join(srcPath, 'index.html')], 
+        loader: 'ng-cache?minimizeOptions=' + JSON.stringify(minimizeOptions)
+      }, {
         test: /\.(woff|woff2|ttf|eot|svg|png|jpg)$/, 
         loader: 'url-loader?limit=8192&name=assets/[hash:12].[ext]?' // inline base64 URLs for <=8k images, direct URLs for the rest
       }],

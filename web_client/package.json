@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Sample AngularJS app",
   "main": "./src/app/core/boot.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./dist/",
@@ -40,6 +39,7 @@
     "ngtemplate-loader": "^1.3.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
     "svg-loader": "0.0.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
