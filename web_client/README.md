@@ -76,23 +76,25 @@ npm run devserver
 ```
 
 #### Install dev tools
-* ***npm install --save-dev webpack***
-* ***npm install --save-dev clean-webpack-plugin***
-* ***npm install --save-dev webpack-dev-server***
-* ***npm install --save-dev html-webpack-plugin***
-* ***npm install --save-dev babel-core babel-preset-es2015***
-* ***npm install --save-dev babel-loader*** 
-* ***npm install --save-dev css-loader***
-* ***npm install --save-dev style-loader***
-* ***npm install --save-dev file-loader***
-* ***npm install --save-dev raw-loader***
-* ***npm install --save-dev jshint-loader***
-* ***npm install --save-dev jshint***
-* ***npm install --save-dev ng-annotate-loader***
-* ***npm install --save-dev url-loader***
-
-* ***npm install --save-dev  ng-cache-loader***
-* ***npm install --save-dev angular-resource***
+```
+$ npm install --save-dev webpack
+$ npm install --save-dev clean-webpack-plugin
+$ npm install --save-dev webpack-dev-server
+$ npm install --save-dev html-webpack-plugin
+$ npm install --save-dev babel-core babel-preset-es2015
+$ npm install --save-dev babel-loader 
+$ npm install --save-dev css-loader
+$ npm install --save-dev style-loader
+$ npm install --save-dev file-loader
+$ npm install --save-dev raw-loader
+$ npm install --save-dev jshint-loader
+$ npm install --save-dev jshint
+$ npm install --save-dev ng-annotate-loader
+$ npm install --save-dev url-loader
+$ npm install --save-dev file-loader
+$ npm install --save-dev  ng-cache-loader
+$ npm install --save-dev angular-resource
+```
 
 ### Application structure 
 * Style guide to organise application
@@ -105,7 +107,7 @@ npm run devserver
 $ npm install angular-material --save
 $ npm install angular-animate --save
 $ npm install angular-aria --save
-$ npm install material-design-icons --save-dev
+$ npm install material-design-icons --save
 ```
 
 Usefull resources: 
