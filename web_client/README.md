@@ -48,6 +48,7 @@ $ npm install --save angular
 $ npm install --save angular-ui-router
 $ npm install --save angular-resource
 ```
+**Note: use  "angular-ui-router": "^1.0.0-beta.3"** or higher with AngularJS 1.6
 
 #### Setup http server
 ```
