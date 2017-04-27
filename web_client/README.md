@@ -163,7 +163,7 @@ $ npm install --save-dev jasmine-core
 
 `karma.conf.js`
 ```
-karma init
+$ karma init
 ```
 > use PhantomJS to avoid Chrome browser launch
 
@@ -204,6 +204,8 @@ webpack: webpackConfig,
 $ npm install --save-dev angular-mocks
 ```
 > Ensure equal version for angular, angular-aria and angular-mocks
+
+* Add dependencies to `test.bundle.js`.
 
 #### Unit tests resources
 * test runner:  https://karma-runner.github.io
