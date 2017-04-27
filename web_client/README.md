@@ -207,6 +207,11 @@ $ npm install --save-dev angular-mocks
 
 * Add dependencies to `test.bundle.js`.
 
+### TBD
+* mock http request
+* spy to mock service dependency
+
+
 #### Unit tests resources
 * test runner:  https://karma-runner.github.io
 * BDD framework: Jasmin https://jasmine.github.io
