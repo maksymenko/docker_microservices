@@ -1,11 +1,10 @@
-// Karma configuration
-// Generated on Wed Apr 26 2017 20:09:39 GMT-0700 (PDT)
+var webpackConfig = require('./webpack.config.js');
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './src/app/',
+    basePath: './',
 
 
     // frameworks to use
@@ -15,7 +14,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '**/*.test.js'
+       {pattern: './test.bundle.js', watched: false}
     ],
 
 
@@ -27,8 +26,10 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      './test.bundle.js': ['webpack', 'sourcemap']
     },
 
+    webpack: webpackConfig,
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

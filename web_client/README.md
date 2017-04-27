@@ -167,6 +167,37 @@ karma init
 ```
 > use PhantomJS to avoid Chrome browser launch
 
+### Add **karma-webpack** plugin
+Karma webpack plugin resolves ES6 dependencies for test and bundles everithing required for given test and webpack does for app.
+```
+$ npm install --save-dev karma-webpack
+```
+* Create config file to ressolve dependencies and add common test dependencies.
+
+`test.bundle.js`
+```
+let context = require.context('./app', true, /\.test\.js/);
+
+context.keys().forEach(context);
+```
+* Use `test.bundle.js` as entry point in 'karma.conf.js'
+
+
+
+var webpackConfig = require('./webpack.config.js');
+
+webpack: webpackConfig,
+
+files: [
+       {pattern: './test.bundle.js', watched: false}
+    ],
+preprocessors: {
+      './config/karma-test-shim.js': ['webpack', 'sourcemap']
+    },
+
+npm install --save-dev karma-sourcemap-loader
+
+
 #### Unit tests (TBD)
 * test runner:  https://karma-runner.github.io
 * BDD framework: Jasmin https://jasmine.github.io

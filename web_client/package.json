@@ -38,6 +38,8 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.3",
     "material-design-icons": "^3.0.1",
     "mdi": "^1.7.22",
     "ng-annotate": "^1.2.1",
