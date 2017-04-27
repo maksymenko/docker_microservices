@@ -145,6 +145,28 @@ export default angular.module('warehouse', [
 .jshintrc
 ```
 
+
+## Unit tests
+
+### Add dependencies for **Karma** rest runner and **Jasmin** test framework
+```
+$ npm install --save-dev karma
+$ npm install --save-dev karma-cli
+$ npm install --save-dev karma-chrome-launcher
+$ npm install --save-dev karma-phantomjs-launcher
+
+$ npm install --save-dev karma-jasmine
+$ npm install --save-dev jasmine-core
+```
+
+### Initialize karma configuration file.
+
+`karma.conf.js`
+```
+karma init
+```
+> use PhantomJS to avoid Chrome browser launch
+
 #### Unit tests (TBD)
 * test runner:  https://karma-runner.github.io
 * BDD framework: Jasmin https://jasmine.github.io
