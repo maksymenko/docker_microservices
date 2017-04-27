@@ -199,7 +199,13 @@ webpack: webpackConfig,
 
 ```
 
-#### Unit tests (TBD)
+### Add angular mock
+```
+$ npm install --save-dev angular-mocks
+```
+> Ensure equal version for angular, angular-aria and angular-mocks
+
+#### Unit tests resources
 * test runner:  https://karma-runner.github.io
 * BDD framework: Jasmin https://jasmine.github.io
-* E2E testa:  https://github.com/angular/protractor
+* **TBD**: E2E testa:  https://github.com/angular/protractor
