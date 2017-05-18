@@ -14,6 +14,10 @@ $ npm install
 $ npm run build
 $ npm start
 ```
+* Run tests
+```
+$ npm test
+```
 
 ## Quick start with docker
 * build image
@@ -199,6 +203,7 @@ webpack: webpackConfig,
 
 ```
 
+
 ### Add angular mock
 ```
 $ npm install --save-dev angular-mocks
@@ -207,12 +212,16 @@ $ npm install --save-dev angular-mocks
 
 * Add dependencies to `test.bundle.js`.
 
+#### Run tests
+```
+$ karma start
+```
+
 ### TBD
 * mock http request
-* spy to mock service dependency
-
 
 #### Unit tests resources
 * test runner:  https://karma-runner.github.io
 * BDD framework: Jasmin https://jasmine.github.io
 * **TBD**: E2E testa:  https://github.com/angular/protractor
+* other: http://angulartestingquickstart.com/

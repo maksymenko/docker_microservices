@@ -4,7 +4,7 @@
   "description": "Sample AngularJS app",
   "main": "./src/app/core/boot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./dist/",
     "build": "webpack -d --progress",
     "devserver": "webpack-dev-server --port 8000 --inline --hot --progress  --history-api-fallback --color --content-base app --hot"
