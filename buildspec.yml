@@ -18,6 +18,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - echo Postbuild ls
+      - ls
 artifacts:
   files:
-    - dist/**/*
+    - ./dist/*
