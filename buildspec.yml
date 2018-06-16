@@ -23,4 +23,4 @@ phases:
 artifacts:
   files:
     - echo artifacts
-    - ./web_client/dist/*
+    - ./web_client/dist/**/*
