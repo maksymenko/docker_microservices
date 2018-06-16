@@ -5,7 +5,7 @@ phases:
     commands:
       - echo start install
       - ls
-      - cd ./web-client
+      - cd ./web_client
       - ls
   pre_build:
     commands:
