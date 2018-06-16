@@ -1,3 +1,4 @@
 /logs/
 npm-debug.log
 .project
+api/report.xml

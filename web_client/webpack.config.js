@@ -49,9 +49,9 @@ module.exports = {
       template: path.join(srcPath, 'index.html')
     }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: false,
-      mangle: false,
-      beautify: true,
+      compress: true,
+      mangle: true,
+      beautify: false,
       sourceMap: false
   })]
 };

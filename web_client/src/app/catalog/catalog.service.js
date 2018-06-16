@@ -7,7 +7,7 @@ class CatalogService {
 
   loadCatalog() {
     let itemsResource = this._$resource(
-      'http://127.0.0.1:8081/item',
+      'http://127.0.0.1:8080/item',
       {},
       {
         get: {
@@ -19,7 +19,7 @@ class CatalogService {
   }
 
   addItem(item) {
-    let itemsResource = this._$resource('/http://127.0.0.1:8081/item', {
+    let itemsResource = this._$resource('/http://127.0.0.1:8080/item', {
 
     }, {
         add: {
