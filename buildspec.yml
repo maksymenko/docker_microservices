@@ -22,4 +22,5 @@ phases:
       - ls
 artifacts:
   files:
-    - ./dist/*
+    - echo artifacts
+    - ./web_client/dist/*
