@@ -23,6 +23,6 @@ phases:
 artifacts:
   files:
     - echo artifacts
-    - ./web_client/dist/**/*
-  discard-paths: yes
+    - '**/*'
+  base-directory: ./web_client/dist
 
