@@ -1,8 +1,5 @@
 FROM openjdk:8-alpine
 
-MAINTAINER Sergii Maksymenko "sergey.maksymenko@gmail.com"
-
-
 #Install utils
 RUN apk add --update \
       bash \
